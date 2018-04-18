@@ -1,0 +1,55 @@
+Arguments: 
+  /Users/dangxiaoli/.nvm/versions/node/v9.8.0/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /Users/dangxiaoli/.nvm/versions/node/v9.8.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.0.1
+
+Node version: 
+  9.8.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "upload-stream",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "bin": "./index.js",
+    "scripts": {
+      "dev": "node ./index.js",
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/waizai/upload-stream.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/waizai/upload-stream/issues"
+    },
+    "homepage": "https://github.com/waizai/upload-stream#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  SyntaxError: /Users/dangxiaoli/Desktop/upload-stream/package.json: Unexpected token } in JSON at position 164
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:797:57
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:92:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:103:13
+      at <anonymous>
