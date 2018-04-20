@@ -2,7 +2,7 @@
 * @Author: dangxiaoli
 * @Date:   2018-04-17 19:52:02
 * @Last Modified by:   dangxiaoli
-* @Last Modified time: 2018-04-19 14:17:51
+* @Last Modified time: 2018-04-20 19:08:58
 */
 let request = require('request');
 let fs = require('fs');
@@ -10,7 +10,7 @@ let BufferCache = require('./bufferCache');
 const chunkSplice = 2097152; // 2MB
 let bufferCache = new BufferCache(chunkSplice);
 
-
+//获取下载内容
 function getChunks(url, onStartDownload, onDownloading, onDownloadClose){
     let totalLength = 0;
 
@@ -103,6 +103,14 @@ function sendChunks(){
                 options: {
                     filename: `example.mp4_IDSPLIT_${chunkId}`
                 }
+            }
+        })
+        sending++;
+        sendP.then((response) => {
+            sending--;
+            if(response.errno === 0 && readyCache.length > 0){
+                //成功上传，继续递归
+                send(readyCache);
             }
         })
     }
