@@ -2,7 +2,7 @@
 * @Author: dangxiaoli
 * @Date:   2018-04-17 20:10:33
 * @Last Modified by:   dangxiaoli
-* @Last Modified time: 2018-04-18 17:15:54
+* @Last Modified time: 2018-04-23 16:03:06
 */
 class BufferCache {
     constructor(cutSize = 2097152){
